@@ -1,0 +1,82 @@
+body {
+    display: flex;
+    background-color: rgb(255, 182, 182);
+    padding: 0;
+    justify-content: center; /*telling the contens of the body to stay in Center horizontally */
+}
+.todoContainer{
+    background-color: white;
+    max-width: fit-content; /*telling the todoContainer layout to be att maximum weight of content */
+    color: black; 
+    padding: 50px;
+    position: relative; /* Relative positioning for animation */
+    animation: DropDown 1s ease-in, 4s ease-in; /* creating an animation when for head to apply when starts */
+    
+}
+.head {
+    display: grid; /* telling the contens to stay in vertical form */
+    text-align: center;
+}
+
+.input {
+    font-size: x-large; 
+    padding: 10px; 
+    border-radius: 4px; /* Rounded corners */
+}
+
+.addBtn {
+    font-size: x-large; 
+    padding: 10px 20px 10px 20px; /* padding differently for all direction */
+}
+
+.errorText {
+    color: red; 
+    animation: blink 0.5s step-start 4; /* Apply blink animation */
+}
+.list{
+    display: grid;
+    padding: 0px;
+}
+.newList {
+    display: grid;
+    grid-template-columns: repeat(2, max-content); /* Create 2 columns with max width of fit content */
+    gap: 10px; /*Add some space between columns */
+    padding: 20px;
+    font-size: x-large;
+    cursor: pointer;
+    justify-content: center;
+}
+.deleteBtn{
+    margin-left: 20px;
+}
+.markAsDone {
+    text-decoration: line-through; /* Strike through the text */
+    color: gray; /* Change text color to gray */
+}
+
+
+
+
+@keyframes blink {
+    50% {
+        opacity: 0; /* Make text invisible at 50% */
+    }
+}
+
+/* Animation for DropDown effect */
+@keyframes DropDown {
+    0% {
+        top: -100px; /* Start above the screen */
+        opacity: 0; /* Invisible at start */
+    }
+    50% {
+        top: 20px; /* Move down */
+    }
+    70% {
+        top: 0px; /* Move up slightly */
+    }
+    100% {
+        top: 0; /* End at the final position */
+        opacity: 1; /* Fully visible at end */
+    }
+}

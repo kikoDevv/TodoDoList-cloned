@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoList😎</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="todoContainer">
+        <!--Head section contains input,button and primary info-->
+        <header class="head">
+            <h1>My ToDo</h1>
+            <p> <i id="completedCount">0</i> completed</p>
+            <div class="inputAndBtn">
+                <input type="text" class="input" placeholder="What to do?">
+                <button class="addBtn">Ok</button>
+            </div>
+            <div class="error">
+                <!--Here is goin to dynamicly generats an error text when input is empy and button is pressed-->
+            </div>
+        </header>
+        <!--
+        
+        This section is for the list of todos and delete button
+        
+        -->
+        <body class="body">
+            <ul class="newList">
+                <!--Here is going to be the list of todos-->
+            </ul>
+        </body>
+    </div>
+</body>
+</html>
